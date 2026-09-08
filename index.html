@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Maison Assemblé — limited wardrobe objects composed with intention.">
+  <meta name="theme-color" content="#20251f">
+  <meta property="og:title" content="Maison Assemblé — Dress as composition">
+  <meta property="og:description" content="A wardrobe of precise forms, quiet materials and pieces made to live together.">
+  <meta property="og:image" content="assets/hero-women.jpg">
+  <title>Maison Assemblé — Dress as composition</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/hero-women.jpg" as="image" fetchpriority="high">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page-progress" aria-hidden="true"><span id="pageProgress"></span></div>
+  <div class="cursor" aria-hidden="true"><span></span></div>
+
+  <header class="site-header" id="siteHeader">
+    <a class="wordmark interactive" href="#top" aria-label="Maison Assemblé, home">
+      <span>Maison</span><span>Assemblé</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a class="interactive" href="#atelier"><span>01</span> Atelier</a>
+      <a class="interactive" href="#collection"><span>02</span> Collection</a>
+      <a class="interactive" href="#materials"><span>03</span> Materials</a>
+      <a class="interactive" href="#journal"><span>04</span> Journal</a>
+    </nav>
+    <div class="header-actions">
+      <button class="bag-button interactive magnetic" id="bagBtn" type="button" aria-haspopup="dialog">
+        <span class="bag-label">Bag</span><span class="bag-count" id="bagCount">0</span>
+      </button>
+      <button class="menu-toggle interactive" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav aria-label="Mobile navigation">
+      <a href="#atelier"><small>01</small><span>Atelier</span></a>
+      <a href="#collection"><small>02</small><span>Collection</span></a>
+      <a href="#materials"><small>03</small><span>Materials</span></a>
+      <a href="#journal"><small>04</small><span>Journal</span></a>
+    </nav>
+    <div class="mobile-menu-foot"><span>Paris · Stockholm</span><span>Edition 01 / 2026</span></div>
+  </div>
+
+  <main id="main">
+    <section class="hero" id="top" data-theme="dark">
+      <div class="hero-copy">
+        <p class="kicker hero-reveal">Edition No. 01 <span></span> Autumn / Winter 2026</p>
+        <h1 aria-label="Dress as composition">
+          <span class="title-line hero-reveal">Dress as</span>
+          <span class="title-line title-accent hero-reveal">composition.</span>
+        </h1>
+        <div class="hero-bottom hero-reveal">
+          <p>A wardrobe of precise forms, quiet materials and pieces designed to exist beautifully together.</p>
+          <a class="arrow-link interactive magnetic" href="#atelier"><span>Compose your look</span><i>↘</i></a>
+        </div>
+      </div>
+
+      <div class="hero-visual" id="heroVisual">
+        <div class="hero-image-wrap"><img id="heroImg" src="assets/hero-women.jpg" alt="Editorial portrait in a sculptural black and ivory tailored look" fetchpriority="high"></div>
+        <div class="hero-noise" aria-hidden="true"></div>
+        <p class="vertical-note">Paris — Stockholm / Made in Europe</p>
+        <div class="edition-mark" aria-hidden="true"><span>MA</span><small>01</small></div>
+        <div class="gender-switch" id="genderSwitch" role="group" aria-label="Select collection">
+          <button class="active interactive" type="button" data-gender="women" aria-pressed="true"><small>01</small> Women</button>
+          <button class="interactive" type="button" data-gender="men" aria-pressed="false"><small>02</small> Men</button>
+        </div>
+        <a class="scroll-cue interactive" href="#manifesto"><span>Scroll to discover</span><i>↓</i></a>
+      </div>
+    </section>
+
+    <section class="manifesto reveal" id="manifesto" data-theme="light">
+      <p class="section-index">Maison Assemblé / 2026</p>
+      <p class="manifesto-copy">We think of dressing as <em>composition</em> — a dialogue between proportion, texture and the person who brings it to life.</p>
+      <div class="manifesto-note"><span>Our approach</span><p>Fewer pieces.<br>More possibilities.</p></div>
+    </section>
+
+    <div class="marquee" aria-label="Brand values">
+      <div class="marquee-track">
+        <span>Tailored in Europe</span><i>✦</i><span>Natural materials</span><i>✦</i><span>Limited editions</span><i>✦</i><span>Designed to combine</span><i>✦</i>
+        <span aria-hidden="true">Tailored in Europe</span><i aria-hidden="true">✦</i><span aria-hidden="true">Natural materials</span><i aria-hidden="true">✦</i><span aria-hidden="true">Limited editions</span><i aria-hidden="true">✦</i><span aria-hidden="true">Designed to combine</span><i aria-hidden="true">✦</i>
+      </div>
+    </div>
+
+    <section class="atelier section-pad" id="atelier" data-theme="light">
+      <div class="section-heading reveal">
+        <div><p class="kicker"><span>01</span> The dressing room</p><h2>Build the <em>silhouette</em></h2></div>
+        <div class="heading-aside"><p>Five objects. One considered whole. Explore each piece on the body or as an independent form.</p><span id="lookCode">Look W–01</span></div>
+      </div>
+
+      <div class="composer reveal">
+        <div class="canvas" id="canvas" aria-live="polite"></div>
+        <aside class="selector" aria-label="Look builder">
+          <div class="selector-head">
+            <p id="wearLabel">Womenswear</p>
+            <div class="mode-switch" role="group" aria-label="Look view">
+              <button class="active interactive" type="button" data-mode="model" aria-pressed="true">On model</button>
+              <button class="interactive" type="button" data-mode="cards" aria-pressed="false">As pieces</button>
+            </div>
+          </div>
+          <div class="selector-rows" id="selectorRows"></div>
+          <div class="look-summary">
+            <div><span>Complete look</span><small>5 pieces · complimentary delivery</small></div>
+            <strong id="lookTotal"></strong>
+          </div>
+          <button class="primary-button magnetic interactive" id="addLook" type="button"><span>Add complete look</span><i>→</i></button>
+        </aside>
+      </div>
+    </section>
+
+    <section class="collection section-pad" id="collection" data-theme="sand">
+      <div class="section-heading reveal">
+        <div><p class="kicker"><span>02</span> Selected objects</p><h2>The <em>collection</em></h2></div>
+        <div class="collection-controls" role="group" aria-label="Filter collection">
+          <button class="active interactive" type="button" data-filter="current">Current edit</button>
+          <button class="interactive" type="button" data-filter="all">View all</button>
+        </div>
+      </div>
+      <div class="product-grid" id="productGrid"></div>
+    </section>
+
+    <section class="materials" id="materials" data-theme="dark">
+      <div class="materials-media reveal"><img src="assets/material-story.jpg" alt="Close view of sculptural black tailoring and ivory silk in a limestone interior" loading="lazy"></div>
+      <div class="materials-copy reveal">
+        <p class="kicker"><span>03</span> Material study</p>
+        <h2>Chosen by <em>touch.</em></h2>
+        <p class="materials-intro">Natural fibres, patient construction and surfaces that become more personal with wear.</p>
+        <div class="material-list">
+          <button class="material-row interactive active" type="button" aria-expanded="true"><span>01</span><strong>Responsibly sourced wool</strong><i>−</i></button>
+          <div class="material-detail open"><p>Dense enough to hold architectural volume, soft enough to move naturally with the body.</p></div>
+          <button class="material-row interactive" type="button" aria-expanded="false"><span>02</span><strong>Washed silk</strong><i>+</i></button>
+          <div class="material-detail"><p>A subtle lustre and fluid fall, selected to soften the collection's precise tailoring.</p></div>
+          <button class="material-row interactive" type="button" aria-expanded="false"><span>03</span><strong>Vegetable-tanned leather</strong><i>+</i></button>
+          <div class="material-detail"><p>Finished in small batches and designed to develop a richer tone with time.</p></div>
+        </div>
+        <a class="arrow-link light interactive magnetic" href="#journal"><span>Explore our process</span><i>↘</i></a>
+      </div>
+    </section>
+
+    <section class="journal section-pad" id="journal" data-theme="light">
+      <div class="journal-grid">
+        <div class="journal-image reveal"><img src="assets/journal-original.jpg" alt="Sculptural accessories arranged on pale stone" loading="lazy"><span>Journal 01</span></div>
+        <article class="journal-story reveal">
+          <p class="kicker"><span>04</span> The art of less</p>
+          <blockquote>“Luxury begins where nothing is accidental.”</blockquote>
+          <p>Inside the atelier: proportion, touch and the quiet architecture of a lasting wardrobe. Each line is questioned; every seam has a reason.</p>
+          <a class="arrow-link dark interactive magnetic" href="#appointment"><span>Continue reading</span><i>↗</i></a>
+        </article>
+      </div>
+    </section>
+
+    <section class="appointment" id="appointment" data-theme="olive">
+      <p class="kicker reveal">Private appointments / Paris — Stockholm</p>
+      <h2 class="reveal">Discover the collection<br><em>in person.</em></h2>
+      <a class="round-link magnetic interactive reveal" href="mailto:atelier@maison-assemble.example"><span>Book an<br>appointment</span><i>↗</i></a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand"><a class="wordmark" href="#top"><span>Maison</span><span>Assemblé</span></a><p>Objects for a considered wardrobe.</p></div>
+    <div><p>Explore</p><a href="#atelier">Atelier</a><a href="#collection">Collection</a><a href="#journal">Journal</a></div>
+    <div><p>Visit</p><a href="mailto:atelier@maison-assemble.example">Private appointments</a><a href="#top">Paris</a><a href="#top">Stockholm</a></div>
+    <div><p>Follow</p><a href="#top">Instagram</a><a href="#top">Pinterest</a></div>
+    <div class="footer-meta"><span>© 2026 Maison Assemblé</span><span>Terms · Privacy</span></div>
+  </footer>
+
+  <div class="drawer-overlay" id="overlay" aria-hidden="true">
+    <aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle">
+      <div class="drawer-head">
+        <div><p class="kicker">Your selection</p><h2 id="drawerTitle">Shopping bag</h2></div>
+        <button class="close-button interactive" id="closeBag" type="button" aria-label="Close shopping bag">×</button>
+      </div>
+      <div class="drawer-body" id="drawerBody"></div>
+    </aside>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"><span>Added to your composition</span><i>✓</i></div>
+  <noscript><p class="noscript">Please enable JavaScript to use the interactive look builder.</p></noscript>
+</body>
+</html>
